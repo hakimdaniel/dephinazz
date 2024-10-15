@@ -1,0 +1,62 @@
+* {
+  font-family: "Chakra Petch";
+}
+body {
+  all: unset;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+nav {
+  background-color: blue;
+}
+nav h2 {
+  text-align: center;
+  font-family: "Major Mono Display", monospace;
+  margin: 0;
+  padding-top: 30px;
+  font-size: 2.3rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+header,
+main {
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  background-color: lightblue;
+}
+main {
+  background-color: beige;
+}
+footer {
+  padding: 20px;
+  height: 30vh;
+  background-color: gray;
+}
+footer span {
+  font-size: 1.1rem;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+.active {
+  color: whitesmoke;
+}
