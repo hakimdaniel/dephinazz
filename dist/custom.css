@@ -1,0 +1,65 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: rgb(73, 73, 73);
+}
+.navbar-color {
+  background-color: var(--bs-dark-bg-subtle);
+  padding: 20px;
+}
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+  }
+  .navbar-color {
+    padding: 5px;
+  }
+}
+.active {
+  font-weight: 700;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+table tr {
+  border-bottom: solid 1px rgb(87, 87, 87);
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bg\ .jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+.hero h1 {
+  font-size: 4rem;
+}
+/* Custom CSS for organization chart */
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart .boss,
+.chart .staff {
+  text-align: center;
+  margin-top: 20px;
+}
+.staff-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.line {
+  width: 1px;
+  height: 30px;
+  background-color: black;
+  margin: 0 auto;
+}

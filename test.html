@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organization Chart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom CSS for organization chart */
+      .chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .chart .boss,
+      .chart .staff {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .staff-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+      .line {
+        width: 1px;
+        height: 30px;
+        background-color: black;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="chart">
+        <!-- Boss -->
+        <div class="boss">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Boss</h4>
+              <p class="card-text">CEO / Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Line between Boss and Staff -->
+        <div class="line"></div>
+
+        <!-- Staff Members -->
+        <div class="staff-container">
+          <div class="staff">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Staff 1</h5>
+                <p class="card-text">Staff Position 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="staff">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Staff 2</h5>
+                <p class="card-text">Staff Position 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
