@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dephinazz</title>
+    <link preconnect href="https://cdnjs.cloudflare.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <style type="text/css">
+      * {
+        font-family: system-ui, arial;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      nav {
+        background: #0025fa;
+        padding: 22px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2px;
+      }
+      h1 {
+        color: aliceblue;
+      }
+      main {
+        padding: 12px;
+      }
+      main p,
+      main h2 {
+        text-align: center;
+        padding: 7px;
+      }
+      main p {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      @media (min-width: 600px) {
+        .items {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .box {
+        padding: 20px;
+        border: solid 1px gray;
+        margin: 20px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px;
+        transition: transform 0.1s ease-out;
+      }
+      .box:hover {
+        background-color: rgba(0, 0, 0, 0.23);
+        transform: scale(1.05);
+      }
+      footer {
+        padding: 100px 20px;
+        padding-top: 40px;
+        text-align: center;
+        color: antiquewhite;
+        margin: 0;
+        background-color: rgb(0, 37, 250);
+      }
+      footer span {
+        display: block;
+      }
+      footer span a {
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        color: blanchedalmond;
+      }
+      .loading {
+        opacity: 1; /* Mulai dengan opasitas penuh */
+        transition: opacity 1s ease-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 18, 179);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinner {
+        border: 8px solid gray;
+        border-top: 8px solid white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 0.5s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      svg {
+        margin: 0;
+        padding: 0;
+        display: block; /* Pastikan SVG adalah elemen blok */
+        width: 100%;
+      }
+      .night-mode {
+        background-color: rgb(44, 44, 44);
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+  </div>
+  <body id="content">
+    <nav>
+      <h1>ETC413</h1>
+      <button id="toggleMode"><i class="fa-solid fa-moon"></i></button>
+    </nav>
+    <main>
+      <h2>About DEPHINAZZ Sdn. Bhd.</h2>
+      <p>
+        We are the most popular company that provides many of service in
+        electronic service. We also provides some popular brands electronic
+        device and machine like panasonic, mitsubishi, sharp, LG, samsung,
+        huawei and so many.
+      </p>
+    </main>
+    <h2 style="text-align: center">Our Products</h2>
+    <main class="items">
+      <div class="box">
+        <h2>Produk 1</h2>
+        <p>Produk deskripsi</p>
+      </div>
+      <div class="box">
+        <h2>Produk 2</h2>
+        <p>Produk deskripsi</p>
+      </div>
+      <div class="box">
+        <h2>Produk 3</h2>
+        <p>Produk deskripsi</p>
+      </div>
+    </main>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#0025fa"
+        fill-opacity="1"
+        d="M0,256L48,261.3C96,267,192,277,288,245.3C384,213,480,139,576,133.3C672,128,768,192,864,208C960,224,1056,192,1152,197.3C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <footer id="footer">
+      <span> Dephinazz &copy; 2024 Copyrights Reserved</span><br />
+      <span>Follow us on social media</span><br />
+      <span
+        ><a href="#footer">Instagram</a><a href="#footer">Tiktok</a
+        ><a href="#footer">Facebook</a></span
+      >
+    </footer>
+<script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
