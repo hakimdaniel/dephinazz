@@ -1,0 +1,79 @@
+/* Custom Styles for the Website */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.welcome {
+	width:500;
+	height:252;
+}
+
+.arrow{
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+    .arrow-animate {
+        font-size: 	7rem; /* Saiz ikon panah */
+        display: inline-block;
+        animation: bounce 1.5s infinite; /* Animasi tanpa henti */
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0); /* Kedudukan asal */
+        }
+        50% {
+            transform: translateY(15px); /* Bergerak ke bawah */
+        }
+    }
+
+
+/* Animasi loading */
+        .loading {
+            display: none;
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+        /* Penuhkan lebar dan tinggi */
+        .loading-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+			z-index: 9999;
+            background-color: rgba(255, 255, 255, 255);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+
+@media (max-width: 600px) {
+    /* Gaya untuk skrin kecil seperti tablet dan telefon pintar */
+    .welcome {
+    	width:300px;
+    	height:151.2px;
+    }
+    .arrow {
+    	display:none;
+    }
+}
