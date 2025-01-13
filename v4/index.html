@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="eCommerceAssets/styles/eCommerceStyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+    <script>
+      var __adobewebfontsappname__ = "dreamweaver";
+    </script>
+    <script
+      src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js"
+      type="text/javascript"
+    ></script>
+    <style>
+      .productRow .productInfo .buyButton {
+        background-color: rgb(59, 59, 59);
+        cursor: pointer;
+      }
+      .productRow .productInfo .buyButton:hover {
+        transform: scale(1.2);
+        transition: ease 0.2s;
+      }
+      .productRow .productInfo div img {
+        transition: 0.3s;
+      }
+      .productRow .productInfo div img:hover {
+        transform: scale(1.3);
+      }
+      .productRow .productInfo .productContent {
+        color: black;
+        text-align: center;
+      }
+      .productRow .productInfo p.price {
+        font-weight: bold;
+        color: black;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+
+      .popup img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="popup" class="popup" onclick="closePopup(event)">
+      <h1 style="color: white; font-family: arial; font-size: 20px">
+        Our&nbsp;Service&nbsp;Promotion
+      </h1>
+      <img src="img/poster.png" alt="Promotional Poster" />
+    </div>
+    <div id="mainWrapper">
+      <header>
+        <!-- This is the header content. It contains Logo and links -->
+        <div id="logo">
+          <img src="img/logo.png" width="70" height="72" alt="" />
+          <!-- <img src="logoImage.png" alt="sample logo"> -->
+          <!-- Company Logo text -->
+          &nbsp;
+        </div>
+        <div id="headerLinks">
+          <a href="index.html" title="Homepage link">Home</a
+          ><a href="about.html" title="Know more about us">About</a
+          ><a href="products.html" title="See our products">Products</a
+          ><a
+            href="contact.html"
+            title="Contac our customer service or send your feedback"
+            >Contact</a
+          ><a href="location.html" title="Search for our branch">Location</a>
+        </div>
+      </header>
+      <section id="offer">
+        <img src="img/welcome.gif" width="347" height="175" alt="" />
+        <!-- The offer section displays a banner text for promotions -->
+      </section>
+      <div style="color: white; padding: 17px; background-color: gray">
+        <h1
+          style="
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro',
+              'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;
+          "
+        >
+          Your Trusted Source for Everyday Appliances
+        </h1>
+        <p
+          style="
+            font-family: Consolas, 'Andale Mono', 'Lucida Console',
+              'Lucida Sans Typewriter', Monaco, 'Courier New', monospace;
+          "
+        >
+          Upgrade Your Home, Upgrade Your Life
+        </p>
+      </div>
+      <div id="content">
+        <section class="sidebar">
+          <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
+          <input type="text" id="search" placeholder="search products..." />
+          <div id="menubar">
+            <nav class="menu">
+              <h2>
+                <!-- Title for menuset 1 -->
+                Other Links
+              </h2>
+              <hr />
+              <ul>
+                <!-- List of links under menuset 1 -->
+                <li>
+                  <a href="wm.html" title="Link"
+                    >Washing Machine&nbsp; &nbsp;</a
+                  >
+                </li>
+                <li><a href="tv.html" title="Link">Television</a></li>
+                <li><a href="ac.html" title="Link">Air Conditioner</a></li>
+                <li class="notimp">
+                  <!-- notimp class is applied to remove this link from the tablet and phone views --><a
+                    href="products.html"
+                    title="Link"
+                    >More...</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <nav class="menu">
+              <h2>Social Media</h2>
+              <!-- Title for menuset 2 -->
+              <hr />
+              <ul>
+                <!--List of links under menuset 2 -->
+                <li><a href="#" title="Link">Youtube</a></li>
+                <li><a href="#" title="Link">Facebook&nbsp;</a></li>
+                <li><a href="#" title="Link">Instagram</a></li>
+                <li class="notimp">
+                  <!-- notimp class is applied to remove this link from the tablet and phone views --><a
+                    href="#"
+                    title="Link"
+                    >Twitter</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <section class="mainContent">
+          <div class="productRow">
+            <!-- Each product row contains info of 3 elements -->
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/wash3.png" /></div>
+              <p class="price">RM 1,890</p>
+              <p class="productContent">DH5S1095UB (HISENSE)</p>
+              <p class="productContent">
+                Remote Control/ Cotton / Cotton Color
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('wm.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img src="img/wash2.png" alt="sample" /></div>
+              <p class="price">RM 2,598</p>
+              <p class="productContent">ESW17SM (SHARP)</p>
+              <p class="productContent">
+                Compact Cabinet with Bigger Wash Capacity
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('wm.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/wash1.png" /></div>
+              <p class="price">RM 2,639</p>
+              <p class="productContent">NA-FD125V (PANASONIC)</p>
+              <p class="productContent">
+                StainMaster+ steams away 99.99%*¹ of bacteria
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('wm.html')"
+              />
+            </article>
+          </div>
+          <div class="productRow">
+            <!-- Each product row contains info of 3 elements -->
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img src="img/tv1.png" alt="sample" /></div>
+              <p class="price">RM 2,389</p>
+              <p class="productContent">4K Laser Cinema PX3-PRO (HISENSE)</p>
+              <p class="productContent">Triple Color Laser, 4K</p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('tv.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/tv2.png" /></div>
+              <p class="price">RM 2,590</p>
+              <p class="productContent">70" 4K ULTRA HD SMART TV (SHARP)</p>
+              <p class="productContent">
+                4K Ultra HD Powered by TiVo™ Smart TV
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('tv.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/tv3.png" /></div>
+              <p class="price">RM 2,699</p>
+              <p class="productContent">OLED TV TH-77LZ2000K (PANASONIC)</p>
+              <p class="productContent">
+                Class-leading colour, contrast, clarity and Auto AI mode - HCX
+                Pro AI Processor
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('tv.html')"
+              />
+            </article>
+          </div>
+          <div class="productRow">
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/ac1.png" /></div>
+              <p class="price">RM 2,670</p>
+              <p class="productContent">
+                R32 Inverter Air Conditioner (UAGS) (HISENSE)
+              </p>
+              <p class="productContent">
+                Warranty: General 3 years + Compressor 7 years
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('ac.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/ac2.png" /></div>
+              <p class="price">RM3,210</p>
+              <p class="productContent">AHXP24YMD (SHARP)</p>
+              <p class="productContent">
+                Plasmacluster technology - Remove microbes in the air, providing
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('ac.html')"
+              />
+            </article>
+            <article class="productInfo">
+              <!-- Each individual product description -->
+              <div><img alt="sample" src="img/ac3.png" /></div>
+              <p class="price">RM 2,591</p>
+              <p class="productContent">
+                X-Premium Inverter R32 XU Series (XKH-1) (PANASONIC)
+              </p>
+              <input
+                type="button"
+                name="button"
+                value="Buy"
+                class="buyButton"
+                onclick="go('ac.html')"
+              />
+            </article>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <!-- This is the footer with default 3 divs -->
+        <div>
+          <p>Copyrighs Reserved 2025 @ Dephinazz Sdn. Bhd&nbsp;</p>
+        </div>
+        <div>
+          <p>Your Dream Home Appliances&nbsp;&nbsp;</p>
+        </div>
+        <div class="footerlinks">
+          <p><a href="contact.html" title="Link">Contact Us </a></p>
+          <p><a href="#" title="Link">Whatsapp&nbsp;</a></p>
+          <p><a href="#" title="Link">Instagram</a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
