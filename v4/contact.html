@@ -95,12 +95,8 @@
               <tr>
                 <td>&nbsp;</td>
                 <td>
-                  <input
-                    type="submit"
-                    name="button"
-                    id="button"
-                    value="Submit"
-                  />
+                  <button onclick="goto()">Submit</button>
+                  
                   &nbsp;
                 </td>
               </tr>
@@ -124,5 +120,8 @@
         </div>
       </footer>
     </div>
+    <script>
+      const goto = () => window.location.href = "thanks.html"
+    </script>
   </body>
 </html>
