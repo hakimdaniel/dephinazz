@@ -121,7 +121,7 @@
       </footer>
     </div>
     <script>
-      const goto = () => window.location.href = "thanks.html"
+      const goto = (event) => {event.preventDefault();window.location.href = "thanks.html"}
     </script>
   </body>
 </html>
